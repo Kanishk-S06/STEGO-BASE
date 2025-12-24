@@ -113,10 +113,10 @@ def combine_frames_to_video(frames_folder, output_video_path, frame_rate=30):
 # Example usage
 if __name__ == "__main__":
     # Paths configuration
-    encrypted_message_filename = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\encrypted_message.txt"
-    output_frames_folder = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\output_frames_with_message"
-    original_frames_folder = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\output_frames"
-    output_video_path = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\output_video_with_message.mp4"
+    encrypted_message_filename = r"C:\Users\KANISHK\Desktop\STEGO-BASE\encrypted_message.txt"
+    output_frames_folder = r"C:\Users\KANISHK\Desktop\STEGO-BASE\output_frames_with_message"
+    original_frames_folder = r"C:\Users\KANISHK\Desktop\STEGO-BASE\output_frames"
+    output_video_path = r"C:\Users\KANISHK\Desktop\STEGO-BASE\output_video_with_message.mp4"
     frame_rate = 30 # Adjust as needed
 
     # Load the encrypted message
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     # Load the frames as PNG images
     frames = []
     for filename in sorted(os.listdir(original_frames_folder)):
-        if filename.lower().endswith('.jpg'):
+        if filename.lower().endswith((".png", ".jpg", ".jpeg")):
             frame_path = os.path.join(original_frames_folder, filename)
             frame = cv2.imread(frame_path)
             if frame is not None:

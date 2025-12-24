@@ -4,7 +4,7 @@ from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import scrypt
 
 # --- Paths (edit if needed) ---
-PROJECT_DIR = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography"
+PROJECT_DIR = r"C:\Users\KANISHK\Desktop\STEGO-BASE"
 EXTRACTED_ENCRYPTED_TXT = os.path.join(PROJECT_DIR, "extracted_encrypted_message.txt")
 DECRYPTED_MESSAGE_TXT   = os.path.join(PROJECT_DIR, "decrypted_message.txt")
 PASS_FILE = os.path.join(PROJECT_DIR, "pass.txt")           # optional; plain-text passphrase file

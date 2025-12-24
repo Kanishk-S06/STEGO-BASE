@@ -50,9 +50,9 @@ def save_extracted_message(message, filename):
 
 # Example usage
 if __name__ == "__main__":
-    frame_folder = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\output_frames_with_message"
-    extracted_message_filename = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\extracted_encrypted_message.txt"
-    original_message_filename = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography\encrypted_message.txt"
+    frame_folder = r"C:\Users\KANISHK\Desktop\STEGO-BASE\output_frames_with_message"
+    extracted_message_filename = r"C:\Users\KANISHK\Desktop\STEGO-BASE\extracted_encrypted_message.txt"
+    original_message_filename = r"C:\Users\KANISHK\Desktop\STEGO-BASE\encrypted_message.txt"
 
 
     # Load the frames as PNG images

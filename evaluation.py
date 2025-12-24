@@ -11,7 +11,7 @@ from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 from skimage.measure import shannon_entropy
 
 # --- Paths ---
-PROJECT_DIR = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography"
+PROJECT_DIR = r"C:\Users\KANISHK\Desktop\STEGO-BASE"
 ORIGINAL_FRAMES_DIR = os.path.join(PROJECT_DIR, "output_frames")
 STEGO_FRAMES_DIR = os.path.join(PROJECT_DIR, "output_frames_with_message")
 

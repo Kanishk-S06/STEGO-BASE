@@ -5,7 +5,7 @@ from Crypto.Protocol.KDF import scrypt
 from Crypto.Random import get_random_bytes
 
 # --- Paths (edit if your project lives elsewhere) ---
-PROJECT_DIR = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography"
+PROJECT_DIR = r"C:\Users\KANISHK\Desktop\STEGO-BASE"
 ENCRYPTED_MESSAGE_TXT = os.path.join(PROJECT_DIR, "encrypted_message.txt")
 PLAINTEXT_FILE = os.path.join(PROJECT_DIR, "message.txt")   # optional; if exists, we'll read from it
 PASS_FILE = os.path.join(PROJECT_DIR, "pass.txt")           # optional; plain-text passphrase file

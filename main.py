@@ -2,34 +2,38 @@ import subprocess
 import os
 import sys
 
-# Update this if your working directory is different
-PROJECT_DIR = r"C:\Users\KANISHK\Desktop\Steganography-PJT-main\Steganography"
-
+# --------------------------------------------------
+# Project root
+PROJECT_DIR = r"C:\Users\KANISHK\Desktop\STEGO-BASE"
 os.chdir(PROJECT_DIR)
 
-# List of scripts in order
+# --------------------------------------------------
+# Two-Tier Steganography Pipeline
 steps = [
-    ("Encryption", "Encryption.py"),
-    ("Extract Frames", "extract_frames.py"),
-    ("Embed Message", "embed_msg.py"),
-    ("Extract Message", "extract_modified_frames.py"),
-    ("Decryption", "Decryption.py")
+    ("Tier-0: Encrypt Payload", "Encryption.py"),
+    ("Tier-1: Frame Extraction + Watermarking", "extract_frames.py"),
+    ("Tier-2: Payload Embedding", "embed_msg.py"),
+    ("Tier-2: Payload Extraction", "extract_modified_frames.py"),
+    ("Tier-0: Decryption", "Decryption.py")
 ]
 
+# --------------------------------------------------
 def run_script(name, script):
     print(f"\n🔹 Running step: {name}")
     try:
-        result = subprocess.run([sys.executable, script], check=True)
+        subprocess.run([sys.executable, script], check=True)
         print(f"✅ {name} completed successfully.")
     except subprocess.CalledProcessError as e:
-        print(f"❌ Error while running {script}: {e}")
+        print(f"❌ Error while running {script}")
         sys.exit(1)
 
+# --------------------------------------------------
 def main():
-    print("🚀 Starting Steganography Pipeline...\n")
+    print("🚀 Starting Two-Tier Video Steganography Pipeline...\n")
     for name, script in steps:
         run_script(name, script)
-    print("\n🎉 All steps completed! Check output in your Steganography folder.")
+    print("\n🎉 Pipeline completed successfully!")
 
+# --------------------------------------------------
 if __name__ == "__main__":
     main()
